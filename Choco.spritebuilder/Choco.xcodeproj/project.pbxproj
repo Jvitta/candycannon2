@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040D7F5D19904FC9000F2695 /* Bear.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D7F5C19904FC9000F2695 /* Bear.m */; };
+		040D7F6319916AAB000F2695 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D7F6219916AAB000F2695 /* Shop.m */; };
+		04513C561992C86000CF8CE5 /* JetPackPowerup.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C551992C85F00CF8CE5 /* JetPackPowerup.m */; };
+		0490F7F419902C7400989A8A /* Cannon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490F7F319902C7400989A8A /* Cannon.m */; };
 		04938C21198496EB00E2C9D7 /* Pelican.m in Sources */ = {isa = PBXBuildFile; fileRef = 04938C20198496EB00E2C9D7 /* Pelican.m */; };
 		04938C251984D28200E2C9D7 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 04938C241984D28200E2C9D7 /* Obstacle.m */; };
 		04938C2819856E9100E2C9D7 /* Warning.m in Sources */ = {isa = PBXBuildFile; fileRef = 04938C2719856E9100E2C9D7 /* Warning.m */; };
@@ -62,6 +66,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040D7F5B19904FC9000F2695 /* Bear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bear.h; path = Source/Bear.h; sourceTree = "<group>"; };
+		040D7F5C19904FC9000F2695 /* Bear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bear.m; path = Source/Bear.m; sourceTree = "<group>"; };
+		040D7F6119916AAB000F2695 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shop.h; path = Source/Shop.h; sourceTree = "<group>"; };
+		040D7F6219916AAB000F2695 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shop.m; path = Source/Shop.m; sourceTree = "<group>"; };
+		04513C541992C85F00CF8CE5 /* JetPackPowerup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JetPackPowerup.h; path = Source/JetPackPowerup.h; sourceTree = "<group>"; };
+		04513C551992C85F00CF8CE5 /* JetPackPowerup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JetPackPowerup.m; path = Source/JetPackPowerup.m; sourceTree = "<group>"; };
+		0490F7F219902C7400989A8A /* Cannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cannon.h; path = Source/Cannon.h; sourceTree = "<group>"; };
+		0490F7F319902C7400989A8A /* Cannon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cannon.m; path = Source/Cannon.m; sourceTree = "<group>"; };
 		04938C1F198496EB00E2C9D7 /* Pelican.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pelican.h; path = Source/Pelican.h; sourceTree = "<group>"; };
 		04938C20198496EB00E2C9D7 /* Pelican.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pelican.m; path = Source/Pelican.m; sourceTree = "<group>"; };
 		04938C231984D28200E2C9D7 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = Source/Obstacle.h; sourceTree = "<group>"; };
@@ -159,6 +171,14 @@
 				04938C31198733AA00E2C9D7 /* Menu.m */,
 				04938C371989650F00E2C9D7 /* Candy.h */,
 				04938C381989650F00E2C9D7 /* Candy.m */,
+				0490F7F219902C7400989A8A /* Cannon.h */,
+				0490F7F319902C7400989A8A /* Cannon.m */,
+				040D7F5B19904FC9000F2695 /* Bear.h */,
+				040D7F5C19904FC9000F2695 /* Bear.m */,
+				040D7F6119916AAB000F2695 /* Shop.h */,
+				040D7F6219916AAB000F2695 /* Shop.m */,
+				04513C541992C85F00CF8CE5 /* JetPackPowerup.h */,
+				04513C551992C85F00CF8CE5 /* JetPackPowerup.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -372,13 +392,17 @@
 			files = (
 				04938C2D1986CC6F00E2C9D7 /* ObstacleWarning.m in Sources */,
 				04938C2819856E9100E2C9D7 /* Warning.m in Sources */,
+				0490F7F419902C7400989A8A /* Cannon.m in Sources */,
 				04938C21198496EB00E2C9D7 /* Pelican.m in Sources */,
+				040D7F5D19904FC9000F2695 /* Bear.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				04938C251984D28200E2C9D7 /* Obstacle.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				04938C391989650F00E2C9D7 /* Candy.m in Sources */,
 				04938C32198733AA00E2C9D7 /* Menu.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				04513C561992C86000CF8CE5 /* JetPackPowerup.m in Sources */,
+				040D7F6319916AAB000F2695 /* Shop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

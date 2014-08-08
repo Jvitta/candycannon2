@@ -14,7 +14,7 @@
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>docDimensionsType</key>
@@ -41,15 +41,15 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>1</integer>
+				<integer>4</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Candy</string>
+				<string>candy-wing</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -71,11 +71,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-39</real>
-							<real>58</real>
+							<real>-1.5631912901881151e-06</real>
+							<real>7.1790237426757812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.92826002836227417</real>
+							<real>0.44837528467178345</real>
 						</array>
 					</dict>
 					<dict>
@@ -93,11 +104,27 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>Candy.ccb</string>
+						<array>
+							<string></string>
+							<string>NewAssets/candy-wing.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -105,13 +132,13 @@
 				<key>UUID</key>
 				<integer>2</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Candy</string>
+				<string>candy-ball</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -133,11 +160,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>30</real>
-							<real>30</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -155,25 +193,72 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>Candy.ccb</string>
+						<array>
+							<string></string>
+							<string>NewAssets/candy-ball.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
 					</dict>
 				</array>
 			</dict>
 			<dict>
 				<key>UUID</key>
 				<integer>3</integer>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>rotation</key>
+						<dict>
+							<key>keyframes</key>
+							<array>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>rotation</string>
+									<key>time</key>
+									<real>0.0</real>
+									<key>type</key>
+									<integer>2</integer>
+									<key>value</key>
+									<real>0.0</real>
+								</dict>
+							</array>
+							<key>name</key>
+							<string>rotation</string>
+							<key>type</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+				</dict>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Candy</string>
+				<string>candy-wing</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -195,11 +280,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-78</real>
-							<real>18</real>
+							<real>-3.2631924152374268</real>
+							<real>6.5263848304748535</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.92217552661895752</real>
+							<real>0.45948323607444763</real>
 						</array>
 					</dict>
 					<dict>
@@ -216,142 +312,44 @@
 						</array>
 					</dict>
 					<dict>
+						<key>baseValue</key>
+						<real>0.0</real>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>rotation</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>Degrees</string>
 						<key>value</key>
-						<string>Candy.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>4</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Candy</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>position</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>Position</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
-							<real>26</real>
-							<real>-32</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<string></string>
+							<string>NewAssets/candy-wing.png</string>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>scale</string>
+						<string>color</string>
 						<key>type</key>
-						<string>ScaleLock</string>
+						<string>Color3</string>
 						<key>value</key>
 						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Candy.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>5</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Candy</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>-46</real>
-							<real>-44</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
 							<real>1</real>
 							<real>1</real>
-							<false/>
-							<integer>0</integer>
 						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Candy.ccb</string>
 					</dict>
 				</array>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Candy</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -365,15 +363,15 @@
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string></string>
+			<string>candy</string>
 			<key>cornerRadius</key>
-			<real>0.0</real>
+			<real>10.239700317382812</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -388,40 +386,9 @@
 					<real>0.0</real>
 					<real>0.0</real>
 				</array>
-				<array>
-					<real>0.0</real>
-					<real>32</real>
-				</array>
-				<array>
-					<real>32</real>
-					<real>32</real>
-				</array>
-				<array>
-					<real>32</real>
-					<real>0.0</real>
-				</array>
 			</array>
 			<key>polygons</key>
-			<array>
-				<array>
-					<array>
-						<real>32</real>
-						<real>0.0</real>
-					</array>
-					<array>
-						<real>32</real>
-						<real>32</real>
-					</array>
-					<array>
-						<real>0.0</real>
-						<real>32</real>
-					</array>
-					<array>
-						<real>0.0</real>
-						<real>0.0</real>
-					</array>
-				</array>
-			</array>
+			<array/>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -536,13 +503,13 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>1</real>
 			<key>name</key>
-			<string>Default Timeline</string>
+			<string>Flap</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.5</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

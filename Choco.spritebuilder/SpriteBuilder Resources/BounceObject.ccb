@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCSprite</string>
+				<string>Spring-P-2@4x</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>TemporaryAssets/Blue-Candy.png</string>
+							<string>TemporaryAssets/Spring-P-2@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -127,12 +127,10 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Candy</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -146,15 +144,15 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>candy</string>
+			<string>bounceObject</string>
 			<key>cornerRadius</key>
-			<real>16</real>
+			<real>0.0</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -166,12 +164,43 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>-16.105438232421875</real>
+					<real>-17.968734741210938</real>
+				</array>
+				<array>
+					<real>-16.105438232421875</real>
+					<real>17.332046508789062</real>
+				</array>
+				<array>
+					<real>15.761749267578125</real>
+					<real>17.332046508789062</real>
+				</array>
+				<array>
+					<real>15.761749267578125</real>
+					<real>-17.968734741210938</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array/>
+			<array>
+				<array>
+					<array>
+						<real>15.761749267578125</real>
+						<real>-17.968734741210938</real>
+					</array>
+					<array>
+						<real>15.761749267578125</real>
+						<real>17.332046508789062</real>
+					</array>
+					<array>
+						<real>-16.105438232421875</real>
+						<real>17.332046508789062</real>
+					</array>
+					<array>
+						<real>-16.105438232421875</real>
+						<real>-17.968734741210938</real>
+					</array>
+				</array>
+			</array>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -235,6 +264,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
