@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Assets/bear-2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{212, 788}, {155, 116}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {155, 116}}</string>
+			<key>sourceSize</key>
+			<string>{155, 116}</string>
+		</dict>
+		<key>Assets/cannonSmall.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{455, 154}, {202, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {202, 158}}</string>
+			<key>sourceSize</key>
+			<string>{202, 158}</string>
+		</dict>
+		<key>Assets/cloud1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{212, 335}, {451, 178}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {451, 178}}</string>
+			<key>sourceSize</key>
+			<string>{451, 178}</string>
+		</dict>
+		<key>Assets/cloud2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 154}, {452, 179}}</string>
+			<key>offset</key>
+			<string>{3, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{61, 89}, {452, 179}}</string>
+			<key>sourceSize</key>
+			<string>{568, 360}</string>
+		</dict>
+		<key>Assets/cloud3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{925, 217}, {221, 81}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {221, 81}}</string>
+			<key>sourceSize</key>
+			<string>{221, 81}</string>
+		</dict>
+		<key>Assets/cloud4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 440}, {581, 209}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {581, 209}}</string>
+			<key>sourceSize</key>
+			<string>{581, 209}</string>
+		</dict>
+		<key>Assets/cloud5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {625, 151}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {625, 151}}</string>
+			<key>sourceSize</key>
+			<string>{625, 151}</string>
+		</dict>
+		<key>Assets/electricobstacle.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{628, 1}, {88, 355}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {88, 355}}</string>
+			<key>sourceSize</key>
+			<string>{88, 355}</string>
+		</dict>
+		<key>Assets/pelicansmall-2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{628, 91}, {295, 242}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {295, 242}}</string>
+			<key>sourceSize</key>
+			<string>{295, 242}</string>
+		</dict>
+		<key>Assets/power-bar-slider.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1011, 1}, {10, 199}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{7, 8}, {10, 199}}</string>
+			<key>sourceSize</key>
+			<string>{24, 214}</string>
+		</dict>
+		<key>Assets/power-bar.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{985, 1}, {24, 214}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {24, 214}}</string>
+			<key>sourceSize</key>
+			<string>{24, 214}</string>
+		</dict>
+		<key>Assets/warning.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 335}, {118, 79}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {118, 79}}</string>
+			<key>sourceSize</key>
+			<string>{118, 79}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>Assets.png</string>
+	</dict>
+</dict>
+</plist>

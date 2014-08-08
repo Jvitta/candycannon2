@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>NewAssets/Spring-P-2@4x.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{925, 177}, {62, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {62, 70}}</string>
+			<key>sourceSize</key>
+			<string>{62, 70}</string>
+		</dict>
+		<key>NewAssets/backHill (1).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{754, 1}, {508, 169}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {508, 169}}</string>
+			<key>sourceSize</key>
+			<string>{508, 169}</string>
+		</dict>
+		<key>NewAssets/candy-ball-pink.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{997, 177}, {46, 24}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {46, 24}}</string>
+			<key>sourceSize</key>
+			<string>{46, 24}</string>
+		</dict>
+		<key>NewAssets/candy-ball-purple.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{997, 225}, {20, 22}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {20, 22}}</string>
+			<key>sourceSize</key>
+			<string>{20, 22}</string>
+		</dict>
+		<key>NewAssets/candy-ball.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{983, 372}, {19, 19}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {19, 19}}</string>
+			<key>sourceSize</key>
+			<string>{19, 19}</string>
+		</dict>
+		<key>NewAssets/candy-wing.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{983, 247}, {37, 14}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {37, 14}}</string>
+			<key>sourceSize</key>
+			<string>{37, 14}</string>
+		</dict>
+		<key>NewAssets/cannon (2).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{925, 1}, {110, 86}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {110, 86}}</string>
+			<key>sourceSize</key>
+			<string>{110, 86}</string>
+		</dict>
+		<key>NewAssets/cannon-stand.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{925, 113}, {83, 62}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {83, 62}}</string>
+			<key>sourceSize</key>
+			<string>{83, 62}</string>
+		</dict>
+		<key>NewAssets/grass (2).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {751, 92}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {751, 92}}</string>
+			<key>sourceSize</key>
+			<string>{751, 95}</string>
+		</dict>
+		<key>NewAssets/ground (2).png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{925, 241}, {681, 56}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {681, 56}}</string>
+			<key>sourceSize</key>
+			<string>{681, 56}</string>
+		</dict>
+		<key>NewAssets/jetpack-powerup-nowhite.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{983, 296}, {36, 31}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {36, 31}}</string>
+			<key>sourceSize</key>
+			<string>{36, 31}</string>
+		</dict>
+		<key>NewAssets/jetpack-powerup-transparent-nowhite.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{983, 263}, {36, 31}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {36, 31}}</string>
+			<key>sourceSize</key>
+			<string>{36, 31}</string>
+		</dict>
+		<key>NewAssets/jetpack-powerup.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{983, 329}, {41, 35}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {41, 35}}</string>
+			<key>sourceSize</key>
+			<string>{41, 35}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>NewAssets.png</string>
+	</dict>
+</dict>
+</plist>
