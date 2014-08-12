@@ -40,6 +40,7 @@
     int _candyNum;
     int _floackChance;
     int _flockType;
+    int _maxCandy;
     float _candiesNeeded;
     float _obstacleHieght;
     float _cannonPower;
@@ -105,7 +106,7 @@
     if (self) {
         _candyNum = _candiesNeeded;
         _firstTouch = YES;
-        _candiesNeeded = 1;
+        _candiesNeeded = 2;
         _obstacleSize = (Obstacle *) [CCBReader load:@"Obstacle"];
         _obstacleHieght = _obstacleSize.contentSize.height;
         _pelican.zOrder = 100;
@@ -143,6 +144,7 @@
     [_parallaxContainer addChild:_parallaxBackHills];
     [_parallaxContainer addChild:_parallaxHills];
     [_parallaxContainer addChild:_parallaxClouds];
+    _maxCandy = _candiesNeeded * jetpacks.count;
     [self createCandy];
     
     _physicsNode.collisionDelegate = self;
@@ -268,7 +270,7 @@
     if(!_gameOver && _launched){
         _distance.string = [NSString stringWithFormat:@"%i",(int) (_bear.position.x - startPosition.x)/5];
         float heightPercent = _bear.position.y/_gradNode.contentSize.height;
-        _heightBar.playerCircle.position = ccp(_heightBar.playerCircle.position.x,_heightBar.contentSize.height * heightPercent);
+        _heightBar.playerCircle.position = ccp(_heightBar.playerCircle.position.x, clampf(_heightBar.contentSize.height * heightPercent,0,_heightBar.contentSize.height*0.98));
         //_heightBar.greenBlock.position = ccp(_heightBar.greenBlock.position.x,clampf(_heightBar.greenBlock.position.y, 0, _heightBar.contentSize.height));
     }
     if(_gameStarted){
@@ -323,10 +325,10 @@
         CGPoint worldSpace = [_physicsNode convertToWorldSpace:candy.position];
         CGPoint nodeSpace = [self convertToNodeSpace:worldSpace];
         if(nodeSpace.x <= -1 * candy.contentSize.width - 0.2*screenSize.width){
-            candy.position = ccp(candy.position.x + screenSize.width*1.4,candy.position.y + screenSize.height*1.4);
+            candy.position = ccp(candy.position.x + screenSize.width*1.4,candy.position.y);
         }
         else if(nodeSpace.x >= screenSize.width*1.4){
-            candy.position = ccp(candy.position.x - screenSize.width*1.4,candy.position.y - screenSize.height*1.4);
+            candy.position = ccp(candy.position.x - screenSize.width*1.4,candy.position.y);
         }
     }
     NSMutableArray *_deleteBounceObject = [NSMutableArray array];
@@ -503,11 +505,6 @@
             JetPackPowerup *powerup = jetpacks[i-1];
             float fillheight = (fill/_candiesNeeded) * powerup.jetOpaque.contentSize.height;
             powerup.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width, clampf(fillheight,0,_jetpack1.jetOpaque.contentSize.height));
-            /*if(fill >= _candiesNeeded){
-                powerup.whitePower = [CCSprite spriteWithImageNamed:@"NewAssets/jetpack-powerup.png"];
-                [powerup addChild:powerup.whitePower];
-                powerup.whitePower.position = ccp(-2,-1);
-            }*/
         }
         [nodeB removeFromParent];
     }
@@ -524,6 +521,7 @@
     CCScene *gameplayScene = [CCBReader loadAsScene:@"MainScene"];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
+
 -(void)gameOver{
     NSNumber *_curHighScore = [defaults objectForKey:@"highscore"];
     [self addChild:_gameOverNode];
