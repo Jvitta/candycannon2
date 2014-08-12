@@ -18,6 +18,7 @@
 		04938C32198733AA00E2C9D7 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04938C31198733AA00E2C9D7 /* Menu.m */; };
 		04938C391989650F00E2C9D7 /* Candy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04938C381989650F00E2C9D7 /* Candy.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		8B0932151999F78A00CF6FFF /* HeightBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0932141999F78A00CF6FFF /* HeightBar.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -87,6 +88,8 @@
 		04938C371989650F00E2C9D7 /* Candy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Candy.h; path = Source/Candy.h; sourceTree = "<group>"; };
 		04938C381989650F00E2C9D7 /* Candy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Candy.m; path = Source/Candy.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8B0932131999F78A00CF6FFF /* HeightBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeightBar.h; path = Source/HeightBar.h; sourceTree = "<group>"; };
+		8B0932141999F78A00CF6FFF /* HeightBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeightBar.m; path = Source/HeightBar.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				040D7F6219916AAB000F2695 /* Shop.m */,
 				04513C541992C85F00CF8CE5 /* JetPackPowerup.h */,
 				04513C551992C85F00CF8CE5 /* JetPackPowerup.m */,
+				8B0932131999F78A00CF6FFF /* HeightBar.h */,
+				8B0932141999F78A00CF6FFF /* HeightBar.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				04938C32198733AA00E2C9D7 /* Menu.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				04513C561992C86000CF8CE5 /* JetPackPowerup.m in Sources */,
+				8B0932151999F78A00CF6FFF /* HeightBar.m in Sources */,
 				040D7F6319916AAB000F2695 /* Shop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,7 @@
 #import "Cannon.h"
 #import "Bear.h"
 #import "JetPackPowerup.h"
+#import "HeightBar.h"
 
 @interface CGPointObject : NSObject
 
@@ -47,6 +48,7 @@
     JetPackPowerup *_jetpack1;
     JetPackPowerup *_jetpack2;
     JetPackPowerup *_jetpack3;
+    HeightBar *_heightBar;
     CCNodeGradient *_gradNode;
     CCNode *_contentNode;
     CCPhysicsNode *_physicsNode;
@@ -101,8 +103,9 @@
 {
     self = [super init];
     if (self) {
+        _candyNum = _candiesNeeded;
         _firstTouch = YES;
-        _candiesNeeded = 3;
+        _candiesNeeded = 1;
         _obstacleSize = (Obstacle *) [CCBReader load:@"Obstacle"];
         _obstacleHieght = _obstacleSize.contentSize.height;
         _pelican.zOrder = 100;
@@ -122,8 +125,8 @@
 
 -(void)didLoadFromCCB{
     self.userInteractionEnabled = YES;
-    /*CCActionFollow *follow = [CCActionFollow actionWithTarget:_pelican worldBoundary:CGRectMake(0.0f,0.0f,CGFLOAT_MAX,_gradNode.contentSize.height)];
-    [_contentNode runAction:follow];*/
+    _heightBar.cascadeOpacityEnabled = YES;
+    _heightBar.opacity = 0.0;
     _cannon.slider.scaleY = 0;
     _cannon.zOrder = 1;
     _pelican.physicsBody.velocity = ccp(200,0);
@@ -166,26 +169,23 @@
     [self rotateCannon];
 }
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    if(_candyNum >= _candiesNeeded){
+    if(_candyNum >= _candiesNeeded && CGRectIntersectsRect(_heightBar.greenBlock.boundingBox, _heightBar.playerCircle.boundingBox)){
         _candyNum -= _candiesNeeded;
-        _bear.physicsBody.velocity = ccp(1000,100);
-        _bear.physicsBody.affectedByGravity = NO;
+        int speed = abs(_bear.physicsBody.velocity.x) + abs(_bear.physicsBody.velocity.y);
+        _bear.physicsBody.velocity = ccp(.1*speed,1*speed);
+        /*_bear.physicsBody.affectedByGravity = NO;
         CCActionDelay *delay = [CCActionDelay actionWithDuration:1.5f];
         CCActionCallBlock *gravity = [CCActionCallBlock actionWithBlock:^{
             _bear.physicsBody.affectedByGravity = YES;
         }];
         CCActionSequence *sequence = [CCActionSequence actions:delay,gravity, nil];
-        [self runAction:sequence];
+        [self runAction:sequence];*/
         for(int i = 1;i <= jetpacks.count;i++){
             float fill = _candyNum - ((i * _candiesNeeded) - _candiesNeeded);
             JetPackPowerup *powerup = jetpacks[i-1];
             float fillheight = (fill/_candiesNeeded) * powerup.jetOpaque.contentSize.height;
             powerup.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width, clampf(fillheight,0,_jetpack1.jetOpaque.contentSize.height));
-            /*if(fill <= _candiesNeeded && powerup.whitePower){
-                [powerup removeChild:powerup.whitePower];
-            }*/
         }
-
     }
     if(_firstTouch == NO && !_launched){
         [_cannon.slider stopAction:_repeatBarSlide];
@@ -209,16 +209,30 @@
         CCActionFollow *follow = [CCActionFollow actionWithTarget:_bear worldBoundary:CGRectMake(0.0f,0.0f,CGFLOAT_MAX,_gradNode.contentSize.height)];
         [_contentNode runAction:follow];
         _launched = YES;
+        CCActionFadeIn *fade = [CCActionFadeIn actionWithDuration:1];
+        [_heightBar runAction:fade];
+        
+        CCActionMoveBy *moveUp = [CCActionMoveBy actionWithDuration:1 position:ccp(_position.x,_position.y + 2 * _heightBar.greenBlock.contentSize.height)];
+        
+        CCActionMoveBy *moveDown = [CCActionMoveBy actionWithDuration:1 position:ccp(_position.x,_position.y - 2 * _heightBar.greenBlock.contentSize.height)];
+        
+        CCActionEaseOut *easeOut = [CCActionEaseOut actionWithAction:moveUp rate:1.5];
+        
+        CCActionEaseIn *easeIn = [CCActionEaseIn actionWithAction:moveDown rate:1.5];
+  
+        CCActionSequence *sequence = [CCActionSequence actions:easeOut,easeIn, nil];
+        CCActionRepeatForever *repeat = [CCActionRepeatForever actionWithAction:sequence];
+        [_heightBar.greenBlock runAction:repeat];
     }
     if(_firstTouch == YES){
         _firstTouch = NO;
         [_cannon.barrel stopAction:_repeat];
         
         CCActionScaleTo *scaleBarIn = [CCActionScaleTo actionWithDuration:1 scaleX:1 scaleY:1];
-        CCActionEaseIn *easeIn = [CCActionEaseIn actionWithAction:scaleBarIn rate:2];
+        CCActionEaseIn *easeIn = [CCActionEaseIn actionWithAction:scaleBarIn rate:3];
         
         CCActionScaleTo *scaleBarOut = [CCActionScaleTo actionWithDuration:1 scaleX:1 scaleY:0];
-        CCActionEaseOut *easeOut = [CCActionEaseOut actionWithAction:scaleBarOut rate:2];
+        CCActionEaseOut *easeOut = [CCActionEaseOut actionWithAction:scaleBarOut rate:3];
         
         CCActionSequence *sequence = [CCActionSequence actions:easeIn,easeOut, nil];
         _repeatBarSlide = [CCActionRepeatForever actionWithAction:sequence];
@@ -253,6 +267,9 @@
     }
     if(!_gameOver && _launched){
         _distance.string = [NSString stringWithFormat:@"%i",(int) (_bear.position.x - startPosition.x)/5];
+        float heightPercent = _bear.position.y/_gradNode.contentSize.height;
+        _heightBar.playerCircle.position = ccp(_heightBar.playerCircle.position.x,_heightBar.contentSize.height * heightPercent);
+        //_heightBar.greenBlock.position = ccp(_heightBar.greenBlock.position.x,clampf(_heightBar.greenBlock.position.y, 0, _heightBar.contentSize.height));
     }
     if(_gameStarted){
         _pelican.physicsBody.velocity = ccp(_pelican.physicsBody.velocity.x + 0.1,_pelican.physicsBody.velocity.y);

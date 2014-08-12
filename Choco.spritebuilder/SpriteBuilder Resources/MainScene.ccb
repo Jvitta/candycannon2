@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>49</integer>
+	<integer>55</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -124,8 +124,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.91359299421310425</real>
-							<real>0.94276994466781616</real>
+							<real>0.8329702615737915</real>
+							<real>0.92573267221450806</real>
 							<real>1</real>
 							<real>1</real>
 						</array>
@@ -137,9 +137,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.54558479785919189</real>
-							<real>0.72573870420455933</real>
-							<real>1</real>
+							<real>0.47067517042160034</real>
+							<real>0.79941350221633911</real>
+							<real>0.88490337133407593</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -250,95 +250,6 @@
 						<array>
 							<dict>
 								<key>UUID</key>
-								<integer>32</integer>
-								<key>baseClass</key>
-								<string>CCSprite</string>
-								<key>children</key>
-								<array/>
-								<key>customClass</key>
-								<string></string>
-								<key>displayName</key>
-								<string>backHill</string>
-								<key>memberVarAssignmentName</key>
-								<string></string>
-								<key>memberVarAssignmentType</key>
-								<integer>1</integer>
-								<key>properties</key>
-								<array>
-									<dict>
-										<key>name</key>
-										<string>name</string>
-										<key>type</key>
-										<string>StringSimple</string>
-										<key>value</key>
-										<string></string>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>position</string>
-										<key>type</key>
-										<string>Position</string>
-										<key>value</key>
-										<array>
-											<real>0.0</real>
-											<real>-18</real>
-											<integer>0</integer>
-											<integer>0</integer>
-											<integer>0</integer>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>anchorPoint</string>
-										<key>type</key>
-										<string>Point</string>
-										<key>value</key>
-										<array>
-											<real>0.0</real>
-											<real>0.0</real>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>scale</string>
-										<key>type</key>
-										<string>ScaleLock</string>
-										<key>value</key>
-										<array>
-											<real>1</real>
-											<real>1</real>
-											<false/>
-											<integer>0</integer>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>spriteFrame</string>
-										<key>type</key>
-										<string>SpriteFrame</string>
-										<key>value</key>
-										<array>
-											<string></string>
-											<string>NewAssets/backHill (1).png</string>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>color</string>
-										<key>type</key>
-										<string>Color3</string>
-										<key>value</key>
-										<array>
-											<real>1</real>
-											<real>1</real>
-											<real>1</real>
-											<real>1</real>
-										</array>
-									</dict>
-								</array>
-							</dict>
-							<dict>
-								<key>UUID</key>
 								<integer>33</integer>
 								<key>baseClass</key>
 								<string>CCSprite</string>
@@ -369,8 +280,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>506</real>
-											<real>-18</real>
+											<real>0.0</real>
+											<real>-40</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -408,7 +319,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>NewAssets/backHill (1).png</string>
+											<string>Untitled Folder/background (1).png</string>
 										</array>
 									</dict>
 									<dict>
@@ -452,7 +363,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>1013</real>
+									<real>791</real>
 									<real>0.0</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -466,7 +377,7 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>1013</real>
+									<real>791</real>
 									<real>169</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -537,8 +448,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>0.0</real>
-											<real>-18</real>
+											<real>-2.1307421604888077e-08</real>
+											<real>-40</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -576,96 +487,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>NewAssets/backHill (1).png</string>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>color</string>
-										<key>type</key>
-										<string>Color3</string>
-										<key>value</key>
-										<array>
-											<real>1</real>
-											<real>1</real>
-											<real>1</real>
-											<real>1</real>
-										</array>
-									</dict>
-								</array>
-							</dict>
-							<dict>
-								<key>UUID</key>
-								<integer>29</integer>
-								<key>baseClass</key>
-								<string>CCSprite</string>
-								<key>children</key>
-								<array/>
-								<key>customClass</key>
-								<string></string>
-								<key>displayName</key>
-								<string>backHill</string>
-								<key>memberVarAssignmentName</key>
-								<string></string>
-								<key>memberVarAssignmentType</key>
-								<integer>1</integer>
-								<key>properties</key>
-								<array>
-									<dict>
-										<key>name</key>
-										<string>name</string>
-										<key>type</key>
-										<string>StringSimple</string>
-										<key>value</key>
-										<string></string>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>position</string>
-										<key>type</key>
-										<string>Position</string>
-										<key>value</key>
-										<array>
-											<real>506</real>
-											<real>-18</real>
-											<integer>0</integer>
-											<integer>0</integer>
-											<integer>0</integer>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>anchorPoint</string>
-										<key>type</key>
-										<string>Point</string>
-										<key>value</key>
-										<array>
-											<real>0.0</real>
-											<real>0.0</real>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>scale</string>
-										<key>type</key>
-										<string>ScaleLock</string>
-										<key>value</key>
-										<array>
-											<real>1</real>
-											<real>1</real>
-											<false/>
-											<integer>0</integer>
-										</array>
-									</dict>
-									<dict>
-										<key>name</key>
-										<string>spriteFrame</string>
-										<key>type</key>
-										<string>SpriteFrame</string>
-										<key>value</key>
-										<array>
-											<string></string>
-											<string>NewAssets/backHill (1).png</string>
+											<string>Untitled Folder/background (1).png</string>
 										</array>
 									</dict>
 									<dict>
@@ -723,7 +545,7 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>1013</real>
+									<real>791</real>
 									<real>169</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -788,7 +610,7 @@
 								<key>value</key>
 								<array>
 									<real>0.0</real>
-									<real>0.0</real>
+									<real>20</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -826,7 +648,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>NewAssets/grass (2).png</string>
+									<string>Untitled Folder/grassEdit.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -876,8 +698,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>749</real>
-									<real>0.0</real>
+									<real>785</real>
+									<real>20</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -915,7 +737,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>NewAssets/grass (2).png</string>
+									<string>Untitled Folder/grassEdit.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1431,7 +1253,7 @@
 											<real>0.0</real>
 										</array>
 										<array>
-											<real>1.0280532836914062</real>
+											<real>0.0</real>
 											<real>45.587078094482422</real>
 										</array>
 										<array>
@@ -1482,7 +1304,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>681</real>
+											<real>531</real>
 											<real>0.0</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1497,7 +1319,7 @@
 										<key>value</key>
 										<array>
 											<real>0.0</real>
-											<real>0.5</real>
+											<real>0.30000001192092896</real>
 										</array>
 									</dict>
 									<dict>
@@ -1521,7 +1343,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>NewAssets/ground (2).png</string>
+											<string>Untitled Folder/ground (2).png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1589,11 +1411,11 @@
 											<real>45.453033447265625</real>
 										</array>
 										<array>
-											<real>691.45184326171875</real>
+											<real>681.3406982421875</real>
 											<real>45.453033447265625</real>
 										</array>
 										<array>
-											<real>691.45184326171875</real>
+											<real>681.3406982421875</real>
 											<real>0.0</real>
 										</array>
 									</array>
@@ -1651,7 +1473,7 @@
 										<key>value</key>
 										<array>
 											<real>0.0</real>
-											<real>0.5</real>
+											<real>0.30000001192092896</real>
 										</array>
 									</dict>
 									<dict>
@@ -1675,7 +1497,7 @@
 										<key>value</key>
 										<array>
 											<string></string>
-											<string>NewAssets/ground (2).png</string>
+											<string>Untitled Folder/ground (2).png</string>
 										</array>
 									</dict>
 									<dict>
@@ -1725,8 +1547,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>119.26787567138672</real>
-											<real>99.358169555664062</real>
+											<real>103.06739807128906</real>
+											<real>97.333114624023438</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1739,8 +1561,8 @@
 										<string>ScaleLock</string>
 										<key>value</key>
 										<array>
-											<real>1</real>
-											<real>1</real>
+											<real>0.80000001192092896</real>
+											<real>0.80000001192092896</real>
 											<false/>
 											<integer>0</integer>
 										</array>
@@ -1957,8 +1779,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>33</real>
-									<real>184</real>
+									<real>27.200000762939453</real>
+									<real>293</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2019,8 +1841,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>33</real>
-									<real>225.1455078125</real>
+									<real>69.157546997070312</real>
+									<real>293</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2081,8 +1903,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>33</real>
-									<real>266</real>
+									<real>111.19999694824219</real>
+									<real>293</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2317,6 +2139,70 @@
 								</array>
 							</dict>
 						</array>
+					</dict>
+					<dict>
+						<key>UUID</key>
+						<integer>54</integer>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>CCBFile</string>
+						<key>memberVarAssignmentName</key>
+						<string>_heightBar</string>
+						<key>memberVarAssignmentType</key>
+						<integer>1</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>23.404512405395508</real>
+									<real>65.563873291015625</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>HeightBar.ccb</string>
+							</dict>
+						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
