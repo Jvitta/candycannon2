@@ -26,6 +26,14 @@
 
 @end
 
+typedef NS_ENUM(NSInteger, BearType) {
+    Regular,
+    HighlightedFull,
+    HighlightedHalf,
+    HighlightedLow,
+    Angry
+};
+
 @implementation MainScene{
     BOOL _canFlap;
     BOOL _gameStarted;
@@ -45,6 +53,7 @@
     float _obstacleHieght;
     float _cannonPower;
     
+    BearType type;
     Pelican *_pelican;
     JetPackPowerup *_jetpack1;
     JetPackPowerup *_jetpack2;
@@ -104,9 +113,11 @@
 {
     self = [super init];
     if (self) {
+        type = Regular;
+        _candiesNeeded = 3;
         _candyNum = _candiesNeeded;
+        //_jetpack1.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width,_jetpack1.jetOpaque.contentSize.height);
         _firstTouch = YES;
-        _candiesNeeded = 2;
         _obstacleSize = (Obstacle *) [CCBReader load:@"Obstacle"];
         _obstacleHieght = _obstacleSize.contentSize.height;
         _pelican.zOrder = 100;
@@ -126,6 +137,7 @@
 
 -(void)didLoadFromCCB{
     self.userInteractionEnabled = YES;
+    _heightBar.highlighter.opacity = 0.0f;
     _heightBar.cascadeOpacityEnabled = YES;
     _heightBar.opacity = 0.0;
     _cannon.slider.scaleY = 0;
@@ -171,17 +183,22 @@
     [self rotateCannon];
 }
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    if(_candyNum >= _candiesNeeded && CGRectIntersectsRect(_heightBar.greenBlock.boundingBox, _heightBar.playerCircle.boundingBox)){
+    //boost
+    if(_candyNum >= _candiesNeeded && _heightBar.highlighter.opacity > 0){
         _candyNum -= _candiesNeeded;
-        int speed = abs(_bear.physicsBody.velocity.x) + abs(_bear.physicsBody.velocity.y);
-        _bear.physicsBody.velocity = ccp(.1*speed,1*speed);
-        /*_bear.physicsBody.affectedByGravity = NO;
-        CCActionDelay *delay = [CCActionDelay actionWithDuration:1.5f];
-        CCActionCallBlock *gravity = [CCActionCallBlock actionWithBlock:^{
-            _bear.physicsBody.affectedByGravity = YES;
-        }];
-        CCActionSequence *sequence = [CCActionSequence actions:delay,gravity, nil];
-        [self runAction:sequence];*/
+        float _multiplier;
+        float _opacity = ceilf(_heightBar.highlighter.opacity * 100);
+        if (_opacity == 32) {
+            _multiplier = 0.7;
+        }
+        else if (_opacity == 64){
+            _multiplier = 1;
+        }
+        else if (_opacity == 100){
+            _multiplier = 1.3;
+        }
+        float speed = (abs(_bear.physicsBody.velocity.x) + abs(_bear.physicsBody.velocity.y)*_multiplier);
+        _bear.physicsBody.velocity = ccp(.6*speed,-1.2*speed);
         for(int i = 1;i <= jetpacks.count;i++){
             float fill = _candyNum - ((i * _candiesNeeded) - _candiesNeeded);
             JetPackPowerup *powerup = jetpacks[i-1];
@@ -189,6 +206,7 @@
             powerup.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width, clampf(fillheight,0,_jetpack1.jetOpaque.contentSize.height));
         }
     }
+    //beginning launch
     if(_firstTouch == NO && !_launched){
         [_cannon.slider stopAction:_repeatBarSlide];
         _cannonPower = _cannon.slider.scaleY;
@@ -267,11 +285,38 @@
     if(_bear.physicsBody.velocity.x <= 65 && _bear.physicsBody.velocity.y <= 65){
         [_bear stopAction:repeatRotate];
     }
+     //_heightBar.playerCircle.spriteFrame = [CCSpriteFrame frameWithImageNamed:@"NewAssets/BearOnBarHighlight.png"];
     if(!_gameOver && _launched){
+        if(_heightBar.playerCircle.position.y > 46){
+            type = Regular;
+            _heightBar.highlighter.opacity = 0.0f;
+        }
+        if(_candyNum >= _candiesNeeded){
+            if(_heightBar.playerCircle.position.y <= 14){
+                type = HighlightedFull;
+            }
+            else if(_heightBar.playerCircle.position.y <= 28 && _heightBar.playerCircle.position.y >= 14){
+                type = HighlightedHalf;
+            }
+            else if(_heightBar.playerCircle.position.y <= 46 && _heightBar.playerCircle.position.y >= 28){
+                type = HighlightedLow;
+            }
+            switch(type){
+                case HighlightedFull:
+                    _heightBar.highlighter.opacity = 1.0f;
+                    break;
+                case HighlightedHalf:
+                    _heightBar.highlighter.opacity = 0.64f;
+                    break;
+                case HighlightedLow:
+                    _heightBar.highlighter.opacity = 0.32f;
+                    break;
+            }
+            
+        }
         _distance.string = [NSString stringWithFormat:@"%i",(int) (_bear.position.x - startPosition.x)/5];
-        float heightPercent = _bear.position.y/_gradNode.contentSize.height;
+        float heightPercent = (_bear.position.y - _ground1.contentSize.height)/_gradNode.contentSize.height;
         _heightBar.playerCircle.position = ccp(_heightBar.playerCircle.position.x, clampf(_heightBar.contentSize.height * heightPercent,0,_heightBar.contentSize.height*0.98));
-        //_heightBar.greenBlock.position = ccp(_heightBar.greenBlock.position.x,clampf(_heightBar.greenBlock.position.y, 0, _heightBar.contentSize.height));
     }
     if(_gameStarted){
         _pelican.physicsBody.velocity = ccp(_pelican.physicsBody.velocity.x + 0.1,_pelican.physicsBody.velocity.y);
@@ -420,7 +465,7 @@
         [bounceObjects addObject:_bounceObject];
         bounceWorldPosition = [_physicsNode convertToWorldSpace:self.position];
         bounceScreenPosition = [self convertToNodeSpace:bounceWorldPosition];
-        _bouncePosition = ccp(-bounceScreenPosition.x + screenSize.width + arc4random()%(int) screenSize.width,0 + _ground1.contentSize.height/1.5);
+        _bouncePosition = ccp(-bounceScreenPosition.x + screenSize.width + arc4random()%(int) screenSize.width,_ground1.contentSize.height);
         _bounceObject.position = _bouncePosition;
     _bounceObject.physicsBody.sensor = YES;
     }
@@ -473,13 +518,23 @@
         CGPoint candyWorldPosition = [_physicsNode convertToWorldSpace:self.position];
         CGPoint candyScreenPosition = [self convertToNodeSpace:candyWorldPosition];
         if(_floackChance == 1){
-            _flockType = arc4random()%3 + 1;
+            CGPoint randomPosition = ccp(-candyScreenPosition.x + arc4random()%(int)screenSize.width*1.2,candyScreenPosition.y + arc4random()%(int)_gradNode.contentSize.height + screenSize.height/2);
+            int _numInFlock = arc4random()%2 + 2;
+            CGPoint speed = ccp(arc4random()%50 + 100,0);
+            for(int i = 0;i < _numInFlock;i++){
+                Candy *_candy = (Candy *) [CCBReader load:[NSString stringWithFormat:@"Candy%i",arc4random()%3 + 1]];
+                [_physicsNode addChild:_candy];
+                [candies addObject:_candy];
+                _candy.position = ccp(randomPosition.x + arc4random()%100 - 50,randomPosition.y + arc4random()%100 - 50);
+                _candy.physicsBody.velocity = speed;
+            }
+            /*_flockType = arc4random()%3 + 1;
             CCNode *_flock = [CCBReader load:[NSString stringWithFormat:@"Flocks/Flock%i",_flockType]];
             [_physicsNode addChild:_flock];
             [candies addObject:_flock];
             _flock.position = ccp(-candyScreenPosition.x + arc4random()%(int)screenSize.width*1.2,candyScreenPosition.y + arc4random()%(int)_gradNode.contentSize.height + screenSize.height/2);
             _flock.physicsBody.velocity = ccp(arc4random()%50 + 100,0);
-            _flock.physicsBody.sensor = YES;
+            _flock.physicsBody.sensor = YES;*/
         }
         else{
         Candy *_candy = (Candy *) [CCBReader load:[NSString stringWithFormat:@"Candy%i",arc4random()%3 + 1]];

@@ -10,4 +10,20 @@
 
 @implementation HeightBar
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        /*_highlighter = [CCSprite spriteWithImageNamed:@"NewAssets/BearOnBarHighlighter.png"];
+        _highlighter.zOrder = -1;
+        _highlighter.position = ccp(0,0);
+        _highlighter.anchorPoint = ccp(0,0);*/
+    }
+    return self;
+}
+
+-(void)didLoadFromCCB{
+    _highlighter.zOrder = -1;
+}
+
 @end

@@ -18,10 +18,9 @@
     _jetVisable.alphaThreshold = 0;
     [self addChild:_jetVisable];
     _jetVisable.position = ccp(0,0);
-    _jetImage = [CCSprite spriteWithImageNamed:@"NewAssets/jetpack-powerup-nowhite.png"];
+    _jetImage = [CCSprite spriteWithImageNamed:@"NewAssets/PowerUp.png"];
     [_jetVisable addChild:_jetImage];
     _jetImage.position = ccp(0,0);
-    
 }
 
 @end

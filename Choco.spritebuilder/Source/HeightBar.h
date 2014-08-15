@@ -12,5 +12,6 @@
 
 @property(nonatomic, strong) CCSprite *greenBlock;
 @property(nonatomic, strong) CCSprite *playerCircle;
+@property(nonatomic, strong) CCSprite *highlighter;
 
 @end
