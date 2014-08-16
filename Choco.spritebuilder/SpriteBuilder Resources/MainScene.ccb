@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>56</integer>
+	<integer>65</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1222,71 +1222,6 @@
 								<string>_ground2</string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
-								<key>physicsBody</key>
-								<dict>
-									<key>affectedByGravity</key>
-									<true/>
-									<key>allowsRotation</key>
-									<true/>
-									<key>bodyShape</key>
-									<integer>0</integer>
-									<key>collisionCategories</key>
-									<array/>
-									<key>collisionMask</key>
-									<array/>
-									<key>collisionType</key>
-									<string>ground</string>
-									<key>cornerRadius</key>
-									<real>0.0</real>
-									<key>density</key>
-									<real>1</real>
-									<key>dynamic</key>
-									<false/>
-									<key>elasticity</key>
-									<real>1</real>
-									<key>friction</key>
-									<real>0.0</real>
-									<key>points</key>
-									<array>
-										<array>
-											<real>0.0</real>
-											<real>-399.68777465820312</real>
-										</array>
-										<array>
-											<real>0.0</real>
-											<real>45.587078094482422</real>
-										</array>
-										<array>
-											<real>681.3406982421875</real>
-											<real>45.587078094482422</real>
-										</array>
-										<array>
-											<real>681.3406982421875</real>
-											<real>-399.68777465820312</real>
-										</array>
-									</array>
-									<key>polygons</key>
-									<array>
-										<array>
-											<array>
-												<real>681.3406982421875</real>
-												<real>-399.68777465820312</real>
-											</array>
-											<array>
-												<real>681.3406982421875</real>
-												<real>45.587078094482422</real>
-											</array>
-											<array>
-												<real>0.0</real>
-												<real>45.587078094482422</real>
-											</array>
-											<array>
-												<real>0.0</real>
-												<real>-399.68777465820312</real>
-											</array>
-										</array>
-									</array>
-								</dict>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -1403,40 +1338,40 @@
 									<key>points</key>
 									<array>
 										<array>
-											<real>0.0</real>
-											<real>-391.78707885742188</real>
+											<real>-873.693115234375</real>
+											<real>-424.7813720703125</real>
 										</array>
 										<array>
-											<real>0.0</real>
+											<real>-873.693115234375</real>
+											<real>55.675609588623047</real>
+										</array>
+										<array>
+											<real>1666.1143798828125</real>
 											<real>45.453033447265625</real>
 										</array>
 										<array>
-											<real>681.3406982421875</real>
-											<real>45.453033447265625</real>
-										</array>
-										<array>
-											<real>681.3406982421875</real>
-											<real>-391.78707885742188</real>
+											<real>1666.1143798828125</real>
+											<real>-403.0078125</real>
 										</array>
 									</array>
 									<key>polygons</key>
 									<array>
 										<array>
 											<array>
-												<real>681.3406982421875</real>
-												<real>-391.78707885742188</real>
+												<real>1666.1143798828125</real>
+												<real>-403.0078125</real>
 											</array>
 											<array>
-												<real>681.3406982421875</real>
+												<real>1666.1143798828125</real>
 												<real>45.453033447265625</real>
 											</array>
 											<array>
-												<real>0.0</real>
-												<real>45.453033447265625</real>
+												<real>-873.693115234375</real>
+												<real>55.675609588623047</real>
 											</array>
 											<array>
-												<real>0.0</real>
-												<real>-391.78707885742188</real>
+												<real>-873.693115234375</real>
+												<real>-424.7813720703125</real>
 											</array>
 										</array>
 									</array>
@@ -1749,17 +1684,258 @@
 				<array>
 					<dict>
 						<key>UUID</key>
-						<integer>46</integer>
+						<integer>64</integer>
+						<key>animatedProperties</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>position</key>
+								<dict>
+									<key>keyframes</key>
+									<array>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>opt</key>
+												<real>2</real>
+												<key>type</key>
+												<integer>11</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>0.0</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>0.0</real>
+												<real>0.0</real>
+											</array>
+										</dict>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>0.5</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>0.0</real>
+												<real>0.20000000298023224</real>
+											</array>
+										</dict>
+									</array>
+									<key>name</key>
+									<string>position</string>
+									<key>type</key>
+									<integer>3</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>baseClass</key>
-						<string>CCBFile</string>
+						<string>CCNode</string>
 						<key>children</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>46</integer>
+								<key>baseClass</key>
+								<string>CCBFile</string>
+								<key>children</key>
+								<array/>
+								<key>customClass</key>
+								<string></string>
+								<key>displayName</key>
+								<string>CCBFile</string>
+								<key>memberVarAssignmentName</key>
+								<string>_jetpack1</string>
+								<key>memberVarAssignmentType</key>
+								<integer>1</integer>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>name</string>
+										<key>type</key>
+										<string>StringSimple</string>
+										<key>value</key>
+										<string></string>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>position</string>
+										<key>type</key>
+										<string>Position</string>
+										<key>value</key>
+										<array>
+											<real>25.200000762939453</real>
+											<real>290</real>
+											<integer>0</integer>
+											<integer>0</integer>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>scale</string>
+										<key>type</key>
+										<string>ScaleLock</string>
+										<key>value</key>
+										<array>
+											<real>1</real>
+											<real>1</real>
+											<false/>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>ccbFile</string>
+										<key>type</key>
+										<string>CCBFile</string>
+										<key>value</key>
+										<string>JetPackPowerup.ccb</string>
+									</dict>
+								</array>
+							</dict>
+							<dict>
+								<key>UUID</key>
+								<integer>48</integer>
+								<key>baseClass</key>
+								<string>CCBFile</string>
+								<key>children</key>
+								<array/>
+								<key>customClass</key>
+								<string></string>
+								<key>displayName</key>
+								<string>CCBFile</string>
+								<key>memberVarAssignmentName</key>
+								<string>_jetpack2</string>
+								<key>memberVarAssignmentType</key>
+								<integer>1</integer>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>name</string>
+										<key>type</key>
+										<string>StringSimple</string>
+										<key>value</key>
+										<string></string>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>position</string>
+										<key>type</key>
+										<string>Position</string>
+										<key>value</key>
+										<array>
+											<real>62.027191162109375</real>
+											<real>290</real>
+											<integer>0</integer>
+											<integer>0</integer>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>scale</string>
+										<key>type</key>
+										<string>ScaleLock</string>
+										<key>value</key>
+										<array>
+											<real>1</real>
+											<real>1</real>
+											<false/>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>ccbFile</string>
+										<key>type</key>
+										<string>CCBFile</string>
+										<key>value</key>
+										<string>JetPackPowerup.ccb</string>
+									</dict>
+								</array>
+							</dict>
+							<dict>
+								<key>UUID</key>
+								<integer>47</integer>
+								<key>baseClass</key>
+								<string>CCBFile</string>
+								<key>children</key>
+								<array/>
+								<key>customClass</key>
+								<string></string>
+								<key>displayName</key>
+								<string>CCBFile</string>
+								<key>memberVarAssignmentName</key>
+								<string>_jetpack3</string>
+								<key>memberVarAssignmentType</key>
+								<integer>1</integer>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>name</string>
+										<key>type</key>
+										<string>StringSimple</string>
+										<key>value</key>
+										<string></string>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>position</string>
+										<key>type</key>
+										<string>Position</string>
+										<key>value</key>
+										<array>
+											<real>98.800003051757812</real>
+											<real>290</real>
+											<integer>0</integer>
+											<integer>0</integer>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>scale</string>
+										<key>type</key>
+										<string>ScaleLock</string>
+										<key>value</key>
+										<array>
+											<real>1</real>
+											<real>1</real>
+											<false/>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>ccbFile</string>
+										<key>type</key>
+										<string>CCBFile</string>
+										<key>value</key>
+										<string>JetPackPowerup.ccb</string>
+									</dict>
+								</array>
+							</dict>
+						</array>
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCBFile</string>
+						<string>CCNode</string>
 						<key>memberVarAssignmentName</key>
-						<string>_jetpack1</string>
+						<string>_jetPacksContainer</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -1773,17 +1949,46 @@
 								<string></string>
 							</dict>
 							<dict>
+								<key>baseValue</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
+								</array>
 								<key>name</key>
 								<string>position</string>
 								<key>type</key>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>25.200000762939453</real>
-									<real>290</real>
+									<real>0.0</real>
+									<real>0.0</real>
 									<integer>0</integer>
 									<integer>0</integer>
+									<integer>2</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>contentSize</string>
+								<key>type</key>
+								<string>Size</string>
+								<key>value</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
 									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>anchorPoint</string>
+								<key>type</key>
+								<string>Point</string>
+								<key>value</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
 								</array>
 							</dict>
 							<dict>
@@ -1799,139 +2004,9 @@
 									<integer>0</integer>
 								</array>
 							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>JetPackPowerup.ccb</string>
-							</dict>
 						</array>
-					</dict>
-					<dict>
-						<key>UUID</key>
-						<integer>48</integer>
-						<key>baseClass</key>
-						<string>CCBFile</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>CCBFile</string>
-						<key>memberVarAssignmentName</key>
-						<string>_jetpack2</string>
-						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>62.027191162109375</real>
-									<real>290</real>
-									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>JetPackPowerup.ccb</string>
-							</dict>
-						</array>
-					</dict>
-					<dict>
-						<key>UUID</key>
-						<integer>47</integer>
-						<key>baseClass</key>
-						<string>CCBFile</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>CCBFile</string>
-						<key>memberVarAssignmentName</key>
-						<string>_jetpack3</string>
-						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>98.800003051757812</real>
-									<real>290</real>
-									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>JetPackPowerup.ccb</string>
-							</dict>
-						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -2143,6 +2218,62 @@
 					<dict>
 						<key>UUID</key>
 						<integer>54</integer>
+						<key>animatedProperties</key>
+						<dict>
+							<key>0</key>
+							<dict/>
+							<key>1</key>
+							<dict>
+								<key>position</key>
+								<dict>
+									<key>keyframes</key>
+									<array>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>opt</key>
+												<real>2</real>
+												<key>type</key>
+												<integer>2</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>0.0</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>0.052473127841949463</real>
+												<real>0.058433517813682556</real>
+											</array>
+										</dict>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>0.5</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>-0.20000000298023224</real>
+												<real>0.058433517813682556</real>
+											</array>
+										</dict>
+									</array>
+									<key>name</key>
+									<string>position</string>
+									<key>type</key>
+									<integer>3</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>baseClass</key>
 						<string>CCBFile</string>
 						<key>children</key>
@@ -2166,17 +2297,22 @@
 								<string></string>
 							</dict>
 							<dict>
+								<key>baseValue</key>
+								<array>
+									<real>0.052473127841949463</real>
+									<real>0.058433517813682556</real>
+								</array>
 								<key>name</key>
 								<string>position</string>
 								<key>type</key>
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>25.187101364135742</real>
-									<real>58.433517456054688</real>
+									<real>0.052473127841949463</real>
+									<real>0.058433517813682556</real>
 									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
+									<integer>2</integer>
+									<integer>2</integer>
 								</array>
 							</dict>
 							<dict>
@@ -2201,6 +2337,8 @@
 								<string>HeightBar.ccb</string>
 							</dict>
 						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -2242,10 +2380,10 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1</real>
+							<real>1</real>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -2429,6 +2567,42 @@
 				<array/>
 				<key>type</key>
 				<integer>10</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>autoPlay</key>
+			<false/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>12</integer>
+			</dict>
+			<key>chainedSequenceId</key>
+			<integer>-1</integer>
+			<key>length</key>
+			<real>0.5</real>
+			<key>name</key>
+			<string>MoveJetPacksAndBar</string>
+			<key>offset</key>
+			<real>0.0</real>
+			<key>position</key>
+			<real>0.5</real>
+			<key>resolution</key>
+			<real>30</real>
+			<key>scale</key>
+			<real>512</real>
+			<key>sequenceId</key>
+			<integer>1</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>isExpanded</key>
+				<false/>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>11</integer>
 			</dict>
 		</dict>
 	</array>

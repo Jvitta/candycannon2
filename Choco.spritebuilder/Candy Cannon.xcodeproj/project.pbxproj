@@ -34,6 +34,7 @@
 		8BAC5173199DADDD00D93568 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC5164199DADDD00D93568 /* AppIcon40x40.png */; };
 		8BAC5174199DADDD00D93568 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC5165199DADDD00D93568 /* AppIcon40x40@2x.png */; };
 		8BAC5175199DADDD00D93568 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC5166199DADDD00D93568 /* AppIcon29x29@2x.png */; };
+		8BAC517B199E647300D93568 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC517A199E647300D93568 /* GameOver.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -120,6 +121,8 @@
 		8BAC5164199DADDD00D93568 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon40x40.png; path = ../../../../../Downloads/AppIcon40x40.png; sourceTree = "<group>"; };
 		8BAC5165199DADDD00D93568 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon40x40@2x.png"; path = "../../../../../Downloads/AppIcon40x40@2x.png"; sourceTree = "<group>"; };
 		8BAC5166199DADDD00D93568 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon29x29@2x.png"; path = "../../../../../Downloads/AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		8BAC5179199E647300D93568 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOver.h; path = Source/GameOver.h; sourceTree = "<group>"; };
+		8BAC517A199E647300D93568 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOver.m; path = Source/GameOver.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				04513C551992C85F00CF8CE5 /* JetPackPowerup.m */,
 				8B0932131999F78A00CF6FFF /* HeightBar.h */,
 				8B0932141999F78A00CF6FFF /* HeightBar.m */,
+				8BAC5179199E647300D93568 /* GameOver.h */,
+				8BAC517A199E647300D93568 /* GameOver.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -360,7 +365,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Choco" */;
+			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Candy Cannon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -461,6 +466,7 @@
 				04938C21198496EB00E2C9D7 /* Pelican.m in Sources */,
 				040D7F5D19904FC9000F2695 /* Bear.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				8BAC517B199E647300D93568 /* GameOver.m in Sources */,
 				04938C251984D28200E2C9D7 /* Obstacle.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				04938C391989650F00E2C9D7 /* Candy.m in Sources */,
@@ -593,7 +599,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Choco" */ = {
+		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Candy Cannon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDC17B978D8009739AE /* Debug */,

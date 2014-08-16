@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
                BuildableName = "Choco.app"
                BlueprintName = "Choco"
-               ReferencedContainer = "container:Choco.xcodeproj">
+               ReferencedContainer = "container:Candy Cannon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Choco.app"
             BlueprintName = "Choco"
-            ReferencedContainer = "container:Choco.xcodeproj">
+            ReferencedContainer = "container:Candy Cannon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,7 +54,7 @@
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Choco.app"
             BlueprintName = "Choco"
-            ReferencedContainer = "container:Choco.xcodeproj">
+            ReferencedContainer = "container:Candy Cannon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Choco.app"
             BlueprintName = "Choco"
-            ReferencedContainer = "container:Choco.xcodeproj">
+            ReferencedContainer = "container:Candy Cannon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

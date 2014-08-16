@@ -17,6 +17,7 @@
 #import "Bear.h"
 #import "JetPackPowerup.h"
 #import "HeightBar.h"
+#import "GameOver.h"
 
 @interface CGPointObject : NSObject
 
@@ -43,6 +44,7 @@ typedef NS_ENUM(NSInteger, BearType) {
     BOOL _isPelican;
     BOOL _firstTouch;
     BOOL _launched;
+    BOOL _onShop;
     
     NSNumber *_score;
     int _candyNum;
@@ -66,6 +68,9 @@ typedef NS_ENUM(NSInteger, BearType) {
     CCLabelTTF *_highScoreLabel;
     CCLabelTTF *_scoreLabel;
     
+    CCSprite *shopButton;
+    CCSprite *retryButton;
+    CCSprite *woodEnd;
     Cannon *_cannon;
     CCNode *_cloud1;
     CCNode *_cloud2;
@@ -78,7 +83,7 @@ typedef NS_ENUM(NSInteger, BearType) {
     CCNode *_hill2;
     CCNode *_backHill1;
     CCNode *_backHill2;
-    CCNode *_gameOverNode;
+    GameOver *_gameOverNode;
     Bear *_bear;
     NSArray *_grounds;
     NSArray *_clouds;
@@ -114,9 +119,8 @@ typedef NS_ENUM(NSInteger, BearType) {
     self = [super init];
     if (self) {
         type = Regular;
-        _candiesNeeded = 3;
-        _candyNum = _candiesNeeded;
-        //_jetpack1.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width,_jetpack1.jetOpaque.contentSize.height);
+        _candiesNeeded = 6;
+        _jetpack1.rectColor.contentSize = CGSizeMake(_jetpack1.rectColor.contentSize.width,_jetpack1.jetOpaque.contentSize.height);
         _firstTouch = YES;
         _obstacleSize = (Obstacle *) [CCBReader load:@"Obstacle"];
         _obstacleHieght = _obstacleSize.contentSize.height;
@@ -130,7 +134,6 @@ typedef NS_ENUM(NSInteger, BearType) {
         _parallaxHills = [CCParallaxNode node];
         _parallaxBackHills = [CCParallaxNode node];
         _parallaxClouds = [CCParallaxNode node];
-        _gameOverNode = [CCBReader load:@"GameOver" owner:self];
     }
     return self;
 }
@@ -528,13 +531,6 @@ typedef NS_ENUM(NSInteger, BearType) {
                 _candy.position = ccp(randomPosition.x + arc4random()%100 - 50,randomPosition.y + arc4random()%100 - 50);
                 _candy.physicsBody.velocity = speed;
             }
-            /*_flockType = arc4random()%3 + 1;
-            CCNode *_flock = [CCBReader load:[NSString stringWithFormat:@"Flocks/Flock%i",_flockType]];
-            [_physicsNode addChild:_flock];
-            [candies addObject:_flock];
-            _flock.position = ccp(-candyScreenPosition.x + arc4random()%(int)screenSize.width*1.2,candyScreenPosition.y + arc4random()%(int)_gradNode.contentSize.height + screenSize.height/2);
-            _flock.physicsBody.velocity = ccp(arc4random()%50 + 100,0);
-            _flock.physicsBody.sensor = YES;*/
         }
         else{
         Candy *_candy = (Candy *) [CCBReader load:[NSString stringWithFormat:@"Candy%i",arc4random()%3 + 1]];
@@ -576,19 +572,41 @@ typedef NS_ENUM(NSInteger, BearType) {
     CCScene *gameplayScene = [CCBReader loadAsScene:@"MainScene"];
     [[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
+-(void)shop{
+    if(!_onShop){
+    CCAnimationManager *animationManager = _gameOverNode.userObject;
+    [animationManager runAnimationsForSequenceNamed:@"SwitchStatsToShop"];
+    }
+    _onShop = YES;
+}
+
+-(void)stats{
+    if(_onShop){
+    CCAnimationManager *animationManager = _gameOverNode.userObject;
+    [animationManager runAnimationsForSequenceNamed:@"SwitchShopToStats"];
+    }
+    _onShop = NO;
+}
 
 -(void)gameOver{
-    NSNumber *_curHighScore = [defaults objectForKey:@"highscore"];
+    
+    CCAnimationManager *animationManager = self.userObject;
+    [animationManager runAnimationsForSequenceNamed:@"MoveJetPacksAndBar"];
+    
+    _gameOverNode = (GameOver *) [CCBReader load:@"GameOver" owner:self];
+    CCActionMoveBy *moveBar = [CCActionMoveBy actionWithDuration:1 position:ccp(_position.x - self.contentSize.width,_position.y)];
+    [_heightBar runAction:moveBar];
+    //NSNumber *_curHighScore = [defaults objectForKey:@"highscore"];
     [self addChild:_gameOverNode];
     [self unschedule:@selector(createObstacles)];
     [self unschedule:@selector(createCandy)];
-    _score = [NSNumber numberWithInt:[_distance.string integerValue]];
+    /*_score = [NSNumber numberWithInt:[_distance.string integerValue]];
     _scoreLabel.string = [NSString stringWithFormat:@"%@",_score];
     if(_score > _curHighScore){
         _highscore = _score;
         [defaults setInteger:_highscore forKey:@"highscore"];
     }
-    _highScoreLabel.string = [NSString stringWithFormat:@"%@",_highscore];
+    _highScoreLabel.string = [defaults objectForKey:@"highscore"];*/
     _gameOverNode.position = ccp(screenSize.width/2,screenSize.height/2);
     _gameOver = YES;
 }
